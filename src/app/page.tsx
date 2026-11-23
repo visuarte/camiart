@@ -27,10 +27,9 @@ export const metadata: Metadata = {
 }
 
 const fonts = `
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap');
   :root {
-    --ff-body: 'Inter', system-ui, -apple-system, sans-serif;
-    --ff-display: 'Space Grotesk', 'Inter', sans-serif;
+    --ff-body: var(--font-inter), system-ui, -apple-system, sans-serif;
+    --ff-display: var(--font-display), var(--font-inter), sans-serif;
     --c-accent: #ff4f00;
     --c-accent-hover: #e64500;
     --c-bg: #fafafa;

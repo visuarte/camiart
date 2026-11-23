@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-import { manrope, spaceGrotesk, montserrat } from '@/app/fonts';
+import { manrope, spaceGrotesk, montserrat, inter } from '@/app/fonts';
 import { brandConfig } from "@/config/brand";
 import CookieBanner from "@/app/components/CookieBanner";
 import WhatsAppFloating from '@/app/components/WhatsAppFloating';
@@ -98,7 +98,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" data-scroll-behavior="smooth" className={`h-full antialiased ${manrope.variable} ${spaceGrotesk.variable} ${montserrat.variable}`}>
+    <html lang="es" data-scroll-behavior="smooth" className={`h-full antialiased ${manrope.variable} ${spaceGrotesk.variable} ${montserrat.variable} ${inter.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script type="importmap">
