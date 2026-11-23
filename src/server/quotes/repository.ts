@@ -17,7 +17,7 @@ const getDataDir = (): string => {
   // Fall back to cwd/data for local development
   const tmp = tmpdir();
   try {
-    const testPath = join(tmp, `.camiprint-write-test-${Date.now()}`);
+    const testPath = join(tmp, `.camiart-write-test-${Date.now()}`);
     writeFileSync(testPath, '');
     unlinkSync(testPath);
     _dataDir = tmp;

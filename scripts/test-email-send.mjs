@@ -110,7 +110,7 @@ const orderConfirmationTemplate = (orderNumber, customerName, items) => `
     </p>
     
     <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;">
-      Si tienes preguntas, contáctanos a support@camiprint.com
+      Si tienes preguntas, contáctanos a support@camiart.com
     </p>
   </div>
 </body>
@@ -138,7 +138,7 @@ const quoteNotificationTemplate = (company, quantity, message) => `
     <p style="color: #27ae60; font-weight: bold;">Acceso al dashboard para responder la cotización</p>
     
     <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;">
-      Este es un email automático de Camiprint
+      Este es un email automático de CamiArt
     </p>
   </div>
 </body>
@@ -166,7 +166,7 @@ const quoteCustomerConfirmationTemplate = (company, quoteId) => `
     </p>
     
     <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;">
-      Si tienes preguntas urgentes, escribenos a hola@camiprint.com
+      Si tienes preguntas urgentes, escribenos a hola@camiart.com
     </p>
   </div>
 </body>
@@ -184,8 +184,8 @@ async function sendTestEmail(type, recipient) {
     console.log('📨 Sending ORDER CONFIRMATION email...');
     subject = 'Confirmación de Pedido #TEST12345';
     html = orderConfirmationTemplate('TEST12345', 'Test User', [
-      { name: 'T-Shirt Camiprint', quantity: 2, price: 19.99 },
-      { name: 'Hoodie Camiprint', quantity: 1, price: 49.99 },
+      { name: 'T-Shirt CamiArt', quantity: 2, price: 19.99 },
+      { name: 'Hoodie CamiArt', quantity: 1, price: 49.99 },
     ]);
     
     try {

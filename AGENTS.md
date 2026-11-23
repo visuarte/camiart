@@ -36,7 +36,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 # Deploy manual (producción)
 
 ```powershell
-Set-Location -LiteralPath "C:\camiprint"
+Set-Location -LiteralPath "C:\camiart"
 git add -A
 git commit -m "<tipo>: <descripción breve>"
 git push

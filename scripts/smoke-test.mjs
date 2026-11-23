@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
- * Smoke tests para validar un entorno desplegado de Camiprint.
+ * Smoke tests para validar un entorno desplegado de CamiArt.
  *
  * Uso:
- *   BASE_URL=https://camiprint.vercel.app node scripts/smoke-test.mjs
- *   BASE_URL=https://staging.camiprint.vercel.app METRICS_TOKEN=tk_xxx node scripts/smoke-test.mjs
+ *   BASE_URL=https://camiart.vercel.app node scripts/smoke-test.mjs
+ *   BASE_URL=https://staging.camiart.vercel.app METRICS_TOKEN=tk_xxx node scripts/smoke-test.mjs
  *
  * Salida:
  *   - PASS / FAIL por cada prueba
@@ -42,7 +42,7 @@ function assert(condition, message) {
 
 const validPayload = {
   name: 'Smoke Test Usuario',
-  email: 'smoke@test.camiprint.com',
+  email: 'smoke@test.camiart.com',
   phone: '+34 600 000 001',
   companyName: 'Smoke Corp',
   quantity: '50-99',

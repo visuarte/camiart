@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 /**
- * E2E Tests for Camiprint - Complete User & Admin Journey
+ * E2E Tests for CamiArt - Complete User & Admin Journey
  * 
  * Tests:
  * - Admin login
@@ -9,7 +9,7 @@ import { test, expect } from '@playwright/test';
  * - Checkout success page functionality
  */
 
-test.describe('Camiprint E2E - Complete User & Admin Journey', () => {
+test.describe('CamiArt E2E - Complete User & Admin Journey', () => {
   const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
   const ADMIN_LOGIN_URL = `${BASE_URL}/admin/login`;
   const ADMIN_PANEL_URL = `${BASE_URL}/admin/orders`;
@@ -33,7 +33,7 @@ test.describe('Camiprint E2E - Complete User & Admin Journey', () => {
     const passwordInput = page.locator('input[type="password"], input[name="password"]').first();
     
     if (await emailInput.isVisible() && await passwordInput.isVisible()) {
-      await emailInput.fill('admin@camiprint.test');
+      await emailInput.fill('admin@camiart.test');
       await passwordInput.fill('test-password-123');
       
       const submitButton = page.locator('button[type="submit"]').first();
@@ -175,7 +175,7 @@ test.describe('Camiprint E2E - Complete User & Admin Journey', () => {
   test('Navigation: Should have accessible homepage', async ({ page }) => {
     await page.goto(`${BASE_URL}/`);
     
-    await expect(page).toHaveTitle(/Camiprint/i);
+    await expect(page).toHaveTitle(/CamiArt/i);
     
     const body = page.locator('body');
     const hasContent = (await body.textContent())?.length! > 100;

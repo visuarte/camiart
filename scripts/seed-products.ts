@@ -1,5 +1,5 @@
 /**
- * Seed de productos para Camiprint
+ * Seed de productos para CamiArt
  * Ejecutar con: npx tsx scripts/seed-products.ts
  *
  * Requiere DATABASE_URL apuntando a Supabase (pooler o directo).

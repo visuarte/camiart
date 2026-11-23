@@ -25,7 +25,7 @@ describe('Email Service', () => {
     process.env.SMTP_PORT = '1025';
     process.env.SMTP_USER = '';
     process.env.SMTP_PASS = '';
-    process.env.SMTP_FROM = 'noreply@camiprint.com';
+    process.env.SMTP_FROM = 'noreply@camiart.com';
   });
 
   describe('Email Service Initialization', () => {
@@ -59,13 +59,13 @@ describe('Email Service', () => {
       customerName: 'John Doe',
       items: [
         {
-          productName: 'T-Shirt - Camiprint',
+          productName: 'T-Shirt - CamiArt',
           quantity: 2,
           size: 'M',
           price: 19.99,
         },
         {
-          productName: 'Hoodie - Camiprint',
+          productName: 'Hoodie - CamiArt',
           quantity: 1,
           size: 'L',
           price: 49.99,
@@ -85,8 +85,8 @@ describe('Email Service', () => {
     it('should include all order items in email', async () => {
       const itemNames = mockOrderData.items.map(i => i.productName);
       expect(itemNames.length).toBe(2);
-      expect(itemNames).toContain('T-Shirt - Camiprint');
-      expect(itemNames).toContain('Hoodie - Camiprint');
+      expect(itemNames).toContain('T-Shirt - CamiArt');
+      expect(itemNames).toContain('Hoodie - CamiArt');
     });
 
     it('should include total amount in email', async () => {
@@ -129,7 +129,7 @@ describe('Email Service', () => {
       customerName: 'Jane Smith',
       items: [
         {
-          productName: 'Cap - Camiprint',
+          productName: 'Cap - CamiArt',
           quantity: 1,
           size: 'One Size',
           price: 24.99,

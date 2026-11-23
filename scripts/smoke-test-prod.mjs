@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * Camiprint Production Smoke Tests
+ * CamiArt Production Smoke Tests
  * 
  * Verifies critical endpoints and functionality in production
- * Usage: PROD_URL=https://camiprint.vercel.app ADMIN_TOKEN=xxx node scripts/smoke-test-prod.mjs
+ * Usage: PROD_URL=https://camiart.vercel.app ADMIN_TOKEN=xxx node scripts/smoke-test-prod.mjs
  */
 
-const BASE_URL = process.env.PROD_URL || process.env.BASE_URL || 'https://camiprint.vercel.app';
+const BASE_URL = process.env.PROD_URL || process.env.BASE_URL || 'https://camiart.vercel.app';
 const ADMIN_TOKEN = process.env.ADMIN_AUTH_TOKEN || process.env.ADMIN_TOKEN || '';
 
 const tests = [
@@ -16,7 +16,7 @@ const tests = [
     method: 'GET',
     path: '/',
     expectedStatus: [200],
-    checkContent: 'Camiprint',
+    checkContent: 'CamiArt',
   },
   {
     name: '📦 Catalog Page',
@@ -91,7 +91,7 @@ const tests = [
 async function runTests() {
   console.log(`
 ╔════════════════════════════════════════════════════════════╗
-║     🚀 Camiprint Production Smoke Tests                    ║
+║     🚀 CamiArt Production Smoke Tests                    ║
 ║        URL: ${BASE_URL.padEnd(45)} ║
 ╚════════════════════════════════════════════════════════════╝
   `);

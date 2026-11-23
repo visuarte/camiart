@@ -10,10 +10,10 @@ async function seedDemoOrder() {
   try {
     // Create demo customer
     const customer = await prisma.customer.upsert({
-      where: { email: 'demo@camiprint.test' },
+      where: { email: 'demo@camiart.test' },
       update: {},
       create: {
-        email: 'demo@camiprint.test',
+        email: 'demo@camiart.test',
         name: 'Demo User',
         phone: '+1 (555) 000-0000',
         address: '123 Demo Street',

@@ -3,8 +3,8 @@
 /**
  * WATCHDOG: Validador de brand violations (no depende de ripgrep)
  * 
- * - Detecta uso de "cami print" (legacy, dos palabras)
- * - Permite "Camiprint" y "CamiArt" (marcas oficiales, una palabra)
+ * - Detecta uso de "camiprint" (marca ajena) en cualquier forma: "camiprint", "cami print", "cami-print"
+ * - Solo "CamiArt" es la marca oficial
  * - Ignora archivos de documentación (.md, tests históricos, etc.)
  * - Usa globby (instalado) o glob nativo si está disponible
  * - Falla silenciosamente si globby no existe, pero sigue el build
@@ -18,16 +18,15 @@ import { fileURLToPath } from 'node:url';
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const projectRoot = join(__dirname, '..');
 
-// Legacy brand detection: "cami print" (two words) or "cami-print" (hyphenated)
-// But allow "Camiprint" (one word, official brand) and "camiart" (new official brand)
+// Legacy brand detection: "camiprint" en cualquier forma ("camiprint", "cami print", "cami-print")
+// La única marca oficial es "CamiArt".
 const legacyPatterns = [
-  /cami[\s\-]print/i,       // "cami print" or "cami-print"
+  /cami[\s\-]?print/i,      // camiprint, "cami print" o "cami-print"
 ];
 
 // But whitelist official brands
 const whitelistPatterns = [
-  /Camiprint/,              // Official: Camiprint (one word)
-  /camiart/i,               // Official: CamiArt (new brand)
+  /camiart/i,               // Official: CamiArt
 ];
 
 const roots = [
@@ -136,8 +135,8 @@ function checkFile(absolutePath, relativePath) {
 
 // ============ MAIN ============
 
-console.log(`🔍 Scanning for legacy brand references ("cami print")...`);
-console.log(`   Whitelisting official brands: "Camiprint", "CamiArt"\n`);
+console.log(`🔍 Scanning for legacy brand references ("camiprint")...`);
+console.log(`   Whitelisting official brand: "CamiArt"\n`);
 
 for (const root of roots) {
   const fullPath = join(projectRoot, root);

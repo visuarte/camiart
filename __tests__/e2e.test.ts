@@ -1,5 +1,5 @@
 /**
- * Comprehensive E2E Test Suite for Camiprint MVP
+ * Comprehensive E2E Test Suite for CamiArt MVP
  * 
  * Tests cover complete user journey:
  * Homepage → Catalog → Cart → Checkout → Payment → Confirmation → Admin
@@ -14,7 +14,7 @@ vi.mock('@prisma/client');
 vi.mock('@/lib/stripe');
 vi.mock('@/server/emails/service');
 
-describe('Camiprint E2E - Complete User Journey', () => {
+describe('CamiArt E2E - Complete User Journey', () => {
   const BASE_URL_RAW = process.env.BASE_URL || 'http://localhost:3000';
   const ADMIN_TOKEN = process.env.ADMIN_AUTH_TOKEN || 'test-admin-token';
 
@@ -53,7 +53,7 @@ describe('Camiprint E2E - Complete User Journey', () => {
       });
       expect(response.status).toBe(200);
       const html = await response.text();
-      expect(html).toContain('Camiprint');
+      expect(html).toContain('CamiArt');
     });
 
     it('should have working navigation links', async () => {

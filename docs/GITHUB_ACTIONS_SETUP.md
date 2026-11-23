@@ -218,8 +218,8 @@ En el PR, verás:
 
 **Solution**: 
 - Fix the branding in your code
-- Ensure only "cami print" (two words) is marked as legacy
-- Official brands "Camiprint" and "CamiArt" are whitelisted
+- "camiprint" (en cualquier forma: camiprint, cami print, cami-print) está marcado como legacy
+- Solo "CamiArt" es la marca oficial
 
 ### Issue: Build fails in CI but works locally
 

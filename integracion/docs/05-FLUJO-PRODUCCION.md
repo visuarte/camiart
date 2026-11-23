@@ -1,4 +1,4 @@
-# Flujo de Producción — Camiprint
+# Flujo de Producción — CamiArt
 
 ## Modelo de Negocio
 

@@ -17,8 +17,8 @@ gui-test:
 
 predictive:
 	@echo "=== Predictive monitoring ==="
-	curl -s https://camiprint.vercel.app/api/v1/health | python -m json.tool
+	curl -s https://camiart.vercel.app/api/v1/health | python -m json.tool
 
 incidents:
 	@echo "=== Recent incidents ==="
-	curl -s https://camiprint.vercel.app/api/incidents 2>/dev/null || echo "No incidents endpoint or empty"
+	curl -s https://camiart.vercel.app/api/incidents 2>/dev/null || echo "No incidents endpoint or empty"

@@ -94,7 +94,7 @@ try {
     Write-Host "Redesplegando..." -ForegroundColor Yellow
     npx vercel deploy --prod --yes 2>&1 | Select-Object -Last 5
     Write-Host ""
-    Write-Host "Listo! https://vercel.com/visuarte/camiprint/settings/environment-variables" -ForegroundColor Green
+    Write-Host "Listo! https://vercel.com/visuarte/camiart/settings/environment-variables" -ForegroundColor Green
 } catch {
     Write-Host "ERROR API Vercel: $($_.Exception.Message)" -ForegroundColor Red
     if ($_.Exception.Response) {
