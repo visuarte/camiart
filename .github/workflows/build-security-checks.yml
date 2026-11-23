@@ -92,7 +92,7 @@ jobs:
 
   e2e-mobile-smoke:
     name: E2E Mobile Smoke (iPhone)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: security-checks
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL_TEST }}
@@ -128,7 +128,7 @@ jobs:
 
   e2e-mobile-smoke-pixel-optional:
     name: E2E Mobile Smoke (Pixel) Optional
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: security-checks
     if: ${{ vars.RUN_OPTIONAL_DEVICE_JOBS == 'true' }}
 
