@@ -3,13 +3,10 @@
 import { useEffect, useState, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
-import { Inter, Space_Grotesk } from 'next/font/google';
+import { inter, spaceGrotesk as space } from '@/app/fonts';
 import ProductCard from '@/components/ProductCard';
 import BundleSelector from '@/components/BundleSelector';
 import type { GorModel } from '@/components/ProductCard';
-
-const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'] });
-const space = Space_Grotesk({ subsets: ['latin'], weight: ['500', '700'] });
 
 const PER_PAGE = 24;
 

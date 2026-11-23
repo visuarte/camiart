@@ -3,9 +3,7 @@
 import { useState } from 'react'
 import ProductionDashboard from '@/components/admin/ProductionDashboard'
 import LegacyQueueView from '@/components/admin/LegacyQueueView'
-import { Montserrat } from 'next/font/google'
-
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['700', '800'] })
+import { montserrat } from '@/app/fonts'
 
 export default function ProductionPage() {
   const [tab, setTab] = useState<'unified' | 'queue'>('unified')

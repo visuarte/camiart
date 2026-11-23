@@ -2,30 +2,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-import { Manrope, Space_Grotesk, Montserrat } from "next/font/google";
+import { manrope, spaceGrotesk, montserrat } from '@/app/fonts';
 import { brandConfig } from "@/config/brand";
 import CookieBanner from "@/app/components/CookieBanner";
 import WhatsAppFloating from '@/app/components/WhatsAppFloating';
 import AnalyticsProvider from "@/components/AnalyticsProvider";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  display: "optional",
-  variable: "--font-sans",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  display: "optional",
-  variable: "--font-display",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  display: "optional",
-  weight: ["700", "800", "900"],
-  variable: "--font-montserrat",
-});
 
 const addressParts = brandConfig.postalAddress.split(",").map((part) => part.trim()).filter(Boolean);
 

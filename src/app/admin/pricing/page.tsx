@@ -1,9 +1,7 @@
 'use client'
 
 import PricingManager from '@/components/admin/PricingManager'
-import { Montserrat } from 'next/font/google'
-
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['700', '800'] })
+import { montserrat } from '@/app/fonts'
 
 export default function PricingPage() {
   return (

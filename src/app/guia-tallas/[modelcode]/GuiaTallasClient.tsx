@@ -1,13 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Manrope, Montserrat, Space_Grotesk } from 'next/font/google';
+import { montserrat, manrope, spaceGrotesk } from '@/app/fonts';
 import Link from 'next/link';
 import type { GorModel } from '@/components/ProductCard';
-
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['700', '800', '900'] });
-const manrope = Manrope({ subsets: ['latin'], weight: ['400', '500'] });
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], weight: ['700'] });
 
 export default function GuiaTallasClient({ modelcode }: { modelcode: string }) {
   const [model, setModel] = useState<GorModel | null>(null);

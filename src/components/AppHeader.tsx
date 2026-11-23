@@ -3,11 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Manrope, Montserrat, Space_Grotesk } from 'next/font/google';
+import { montserrat, spaceGrotesk } from '@/app/fonts';
 import CartSummary from './CartSummary';
-
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['700', '800', '900'] });
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], weight: ['700'] });
 
 interface NavItem {
   label: string;

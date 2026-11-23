@@ -1,11 +1,7 @@
 'use client';
 
-import { Manrope, Montserrat, Space_Grotesk } from 'next/font/google';
+import { montserrat, manrope, spaceGrotesk } from '@/app/fonts';
 import { brandConfig } from '@/config/brand';
-
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['700', '800', '900'] });
-const manrope = Manrope({ subsets: ['latin'], weight: ['400', '500'] });
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], weight: ['700'] });
 
 interface FooterProps {
   variant?: 'dark' | 'light';
