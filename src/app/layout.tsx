@@ -1,6 +1,7 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
+import "./material-symbols.css";
 import { Analytics } from "@vercel/analytics/next";
 import { manrope, spaceGrotesk, montserrat, inter } from '@/app/fonts';
 import { brandConfig } from "@/config/brand";
@@ -109,7 +110,6 @@ export default function RootLayout({
             }
           }`}
         </script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
